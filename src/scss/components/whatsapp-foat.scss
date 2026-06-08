@@ -1,0 +1,109 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+
+  background-color: #52ce5e;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
+
+  z-index: 9999;
+
+  transform: rotateY(180deg);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  img {
+    width: 28px;
+    height: 28px;
+  }
+
+  &:hover {
+    transform: scale(1.08) rotateY(180deg);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* CHAT */
+.wa-chat {
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+
+  width: 320px;
+  background: #fff;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
+}
+
+.wa-chat.open {
+  display: flex;
+}
+
+/* HEADER */
+.wa-header {
+  background: #25d366;
+  color: #fff;
+
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* BODY */
+.wa-body {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
+
+  label {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  textarea {
+    resize: none;
+    height: 90px;
+  }
+
+  small {
+    font-size: 11px;
+    text-align: right;
+    color: #666;
+  }
+
+  button {
+    margin-top: 8px;
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}

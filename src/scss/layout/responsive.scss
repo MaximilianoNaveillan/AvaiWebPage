@@ -1,0 +1,160 @@
+@use '../base/variables' as *;
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+  .tabs {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    padding: 12px 40px;
+  }
+
+  .nav-left {
+    gap: 12px;
+  }
+
+  .nav-right {
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    padding: 40px 24px 80px;
+  }
+
+  .hero-image {
+    justify-self: center;
+
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 42px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .gradiant {
+    transform: translateY(-80%) translateX(20%);
+  }
+}
+
+@media (max-width: 768px) {
+  .btn.mobile-full {
+    width: 100%;
+  }
+
+  .container article {
+    padding: 60px 24px;
+  }
+
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    bottom: 16px;
+    right: 16px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-right {
+    gap: 6px;
+  }
+
+  .nav-right > button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .navbar {
+    padding: 12px 30px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  .hero-action {
+    flex-direction: column;
+  }
+
+  .hero-action > button,
+  .hero-action > div {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .hero-tag,
+  .container article {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .gradiant {
+    transform: translateY(-100%) translateX(40%);
+  }
+
+  .container-overlay {
+    /* flex-direction: column; */
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .overlay-card {
+    padding: 8px;
+    width: 100%;
+  }
+
+  .overlay-card-title {
+    font-size: 20px;
+  }
+  .overlay-card-description {
+    font-size: 12px;
+  }
+  .overlay-card-flex {
+    padding: 15px 12px;
+  }
+  .overlay-card-flex h3,
+  .overlay-card-flex h4 {
+    font-size: 8px;
+    line-height: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo span {
+    display: none;
+  }
+
+  .gradiant {
+    transform: translateY(-70%) translateX(40%);
+  }
+  .container-overlay {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .overlay-card {
+    width: 100%;
+    min-height: 60px;
+  }
+}

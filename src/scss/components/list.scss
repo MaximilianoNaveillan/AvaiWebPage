@@ -1,0 +1,30 @@
+@use '../base/variables' as *;
+/* =========================================================
+LIST
+========================================================= */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.list-item {
+  display: flex;
+  gap: 20px;
+}
+
+.list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h6 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $white-light;
+  }
+}

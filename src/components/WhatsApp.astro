@@ -1,0 +1,26 @@
+<button class="btn whatsapp-float" id="waToggle">
+  <img src="/assets/whatsapp-icon.svg" alt="WhatsApp" />
+</button>
+
+<div class="wa-chat" id="waChat">
+  <div class="wa-header">
+    <h4>Contáctanos</h4>
+    <button class="btn small flat ghost text-white" type="button" id="waClose">✕</button>
+  </div>
+
+  <form class="wa-body" id="waForm">
+    <label for="wa-name">Nombre</label>
+    <input id="wa-name" type="text" required />
+
+    <label for="wa-email">Correo</label>
+    <input id="wa-email" type="email" required />
+
+    <label for="wa-message">Mensaje</label>
+    <textarea id="wa-message" maxlength="250" required></textarea>
+
+    <small id="wa-counter">0 / 250</small>
+
+    <button type="submit">Enviar WhatsApp</button>
+  </form>
+</div>
+

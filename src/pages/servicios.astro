@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsApp from '../components/WhatsApp.astro';
+
+import Hero from '../sections/Servicios/Hero.astro';
+import EspecializacionTecnica from '../sections/Servicios/EspecializacionTecnica.astro';
+import Metodologia from '../sections/Servicios/Metodologia.astro';
+import EvidenciaTecnica from '../sections/Servicios/EvidenciaTecnica.astro';
+import CtaServicios from '../sections/Servicios/CTA.astro';
+---
+
+<BaseLayout>
+
+  <Header />
+
+  <main> 
+
+   
+  <Hero />
+  <EspecializacionTecnica />
+  <Metodologia />
+  <EvidenciaTecnica />
+  <CtaServicios />
+  </main>
+  <Footer />
+  <WhatsApp />
+</BaseLayout>

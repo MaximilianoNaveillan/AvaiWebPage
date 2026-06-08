@@ -1,0 +1,93 @@
+@use '../base/variables' as *;
+/* =========================================================
+#FOOTER
+========================================================= */
+
+.container-footer {
+  width: 100%;
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 40px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: auto;
+
+  width: 100%;
+  max-width: $container-width;
+
+  gap: 30px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 20px;
+
+  list-style-type: none;
+
+  a {
+    color: $text-light;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: $text;
+    }
+  }
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  color: $text-light;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  span {
+    color: $text;
+    font-weight: 700;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+
+  margin: 20px 0;
+
+  p {
+    display: inline-flex;
+
+    width: 100%;
+    max-width: $container-width;
+
+    margin: auto;
+    margin-top: 20px;
+
+    color: $text-light;
+  }
+}

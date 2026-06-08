@@ -1,0 +1,216 @@
+@use '../base/variables' as *;
+
+/* =========================================================
+BUTTON SYSTEM
+========================================================= */
+
+.btn {
+  position: relative;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  padding: 16px 28px;
+
+  border: none;
+  border-radius: $radius-small;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.18s ease,
+    box-shadow 0.25s ease,
+    opacity 0.2s ease;
+
+  box-shadow: $shadow-sm;
+
+  /* =========================================================
+  RIPPLE EFFECT
+  ========================================================= */
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    background: currentColor;
+
+    opacity: 0;
+
+    transition: opacity 0.25s ease;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    transform: scale(0);
+
+    opacity: 0;
+
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 0.06;
+  }
+
+  &:active::after {
+    animation: ripple 0.45s ease-out;
+  }
+
+  /* =========================================================
+  STATES
+  ========================================================= */
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  /* &:active {
+    transform: scale(0.98);
+  }
+ */
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    pointer-events: none;
+
+    transform: none;
+  }
+}
+
+/* =========================================================
+RIPPLE ANIMATION
+========================================================= */
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: scale(14);
+    opacity: 0;
+  }
+}
+
+/* =========================================================
+BUTTON VARIANTS
+========================================================= */
+
+.primary-color {
+  background: $primary;
+}
+
+.secondary-color {
+  background: $secondary;
+}
+
+.success-color {
+  background: $success;
+}
+
+.warning-color {
+  background: #f59e0b;
+}
+
+.danger-color {
+  background: #dc2626;
+}
+
+.outlined {
+  border: 2px solid currentColor;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.ghost {
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.flat {
+  box-shadow: none;
+}
+
+/* =========================================================
+BUTTON SIZES
+========================================================= */
+
+.small {
+  padding: 10px 14px;
+  font-size: 0.75rem;
+}
+
+.medium {
+  padding: 14px 18px;
+  font-size: 0.9rem;
+}
+
+.large {
+  padding: 18px 24px;
+  font-size: 1rem;
+}
+
+/* =========================================================
+WIDTH HELPERS
+========================================================= */
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.auto-width {
+  width: fit-content;
+
+  // Compatibilidad Firefox antiguo
+  width: -moz-fit-content;
+}

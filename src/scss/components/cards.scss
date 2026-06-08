@@ -1,0 +1,113 @@
+@use '../base/variables' as *;
+/* =========================================================
+GRID CARD
+========================================================= */
+
+.grid-item-card {
+  position: relative;
+
+  height: 100%;
+
+  padding: 1.2em;
+
+  overflow: hidden;
+
+  border-radius: $radius;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  h3 {
+    color: $text;
+
+    font-size: 1em;
+    font-weight: 600;
+
+    line-height: 1.4;
+  }
+
+  p {
+    padding-top: 0.6em;
+
+    color: $text-light;
+
+    font-size: 0.7em;
+
+    line-height: 1.7;
+  }
+}
+
+.card-hover {
+  &:hover {
+    transform: translateY(-4px);
+    cursor: pointer;
+    box-shadow: $shadow-md;
+  }
+}
+
+/* =========================================================
+IMPORTANT BAR
+========================================================= */
+
+.grid-item-card-important {
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: $important;
+  }
+}
+
+.grid-item-card-secodary {
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: $secondary;
+  }
+}
+
+.grid-item-card-primary {
+  &::after {
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 4px;
+
+    background: $primary;
+  }
+}
+
+/* =========================================================
+CARD CONTENT
+========================================================= */
+
+.grid-item-card-icon {
+  width: 1.5em;
+
+  margin-top: 6px;
+  margin-bottom: 6px;
+
+  /* Compatibilidad con navegadores antiguos */
+  margin-block: 6px;
+}

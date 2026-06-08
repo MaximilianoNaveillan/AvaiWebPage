@@ -1,0 +1,112 @@
+@use '../base/variables' as *;
+/* =========================================================
+DRAWER
+========================================================= */
+
+.drawer {
+  position: fixed;
+
+  top: 0;
+  right: -100%;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh; // Navegadores modernos
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  padding: 24px;
+
+  background: linear-gradient(297deg, $secondary 0%, $secondary-light 80%);
+
+  transition: right 0.3s ease;
+
+  box-shadow: -2px 0 16px rgba(0, 0, 0, 0.12);
+
+  z-index: 200;
+
+  &.open {
+    right: 0;
+  }
+
+  a {
+    color: $text-primary-dark;
+
+    height: 40px;
+    line-height: 40px;
+
+    border-radius: $radius;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    background: linear-gradient(135deg, $secondary, $secondary-dark);
+
+    font-size: 20px;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    text-decoration: none;
+
+    cursor: pointer;
+  }
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+}
+
+.close-btn {
+  background: transparent;
+
+  border: none;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+OVERLAY
+========================================================= */
+
+.overlay {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Mantengo inset para navegadores modernos */
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+
+  z-index: 150;
+
+  &.show {
+    opacity: 1;
+
+    pointer-events: all;
+  }
+}

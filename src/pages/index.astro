@@ -1,17 +1,37 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsApp from '../components/WhatsApp.astro';
+
+import Hero from '../sections/Home/Hero.astro';
+import Problema from '../sections/Home/Problema.astro';
+import Servicios from '../sections/Home/Servicios.astro';
+import CasosExito from '../sections/Home/CasosExito.astro';
+import CTA from '../sections/Home/CTA.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+
+  <Header />
+
+  <main>
+
+    <Hero />
+
+    <Problema />
+
+    <Servicios />
+
+    <CasosExito />
+
+    <CTA />
+
+  </main>
+
+  <Footer />
+
+  <WhatsApp />
+
+</BaseLayout>

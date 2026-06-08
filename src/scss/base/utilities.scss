@@ -1,0 +1,489 @@
+@use '../base/variables' as *;
+
+/* =========================================================
+UTILITIES
+========================================================= */
+
+.elevation-1 {
+  box-shadow: $shadow-sm;
+}
+
+/* =========================================================
+DISPLAY
+========================================================= */
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-center {
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.f-wrap {
+  flex-wrap: wrap !important;
+}
+
+.space-between {
+  justify-content: space-between !important;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end; // mejor compatibilidad
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end; // mejor compatibilidad
+}
+
+/* =========================================================
+GAP
+========================================================= */
+
+.gap-10 {
+  gap: 10px !important;
+}
+
+.gap-15 {
+  gap: 15px !important;
+}
+
+.gap-20 {
+  gap: 20px !important;
+}
+
+.gap-25 {
+  gap: 25px !important;
+}
+
+.gap-30 {
+  gap: 30px !important;
+}
+
+/* =========================================================
+LINE HEIGHT
+========================================================= */
+
+.line-height-1 {
+  line-height: 1 !important;
+}
+
+.line-height-1-5 {
+  line-height: 1.5 !important;
+}
+
+.line-height-2 {
+  line-height: 2 !important;
+}
+
+.line-height-2-5 {
+  line-height: 2.5 !important;
+}
+
+/* =========================================================
+BACKGROUND
+========================================================= */
+
+.bg-white {
+  background: $white;
+  color: $text;
+}
+
+.bg-primary {
+  background: $primary;
+  color: $white;
+}
+
+.bg-primary-dark {
+  background: $primary-dark;
+  color: $white;
+}
+
+.bg-soft {
+  background: $bg-soft;
+  color: $text;
+}
+
+.bg-strong {
+  background: rgba(0, 0, 0, 0.03);
+  color: $text;
+}
+
+.bg-opacity {
+  background: $bg-opacity;
+  color: $text;
+}
+
+.bg-dark {
+  background: $bg-dark;
+  color: $white;
+}
+
+.bg-secondary {
+  background: $secondary;
+  color: $white !important;
+}
+
+.divider-small {
+  width: 20%;
+  height: 4px;
+
+  background-color: $primary;
+}
+
+/* =========================================================
+TEXT TRANSFORM
+========================================================= */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* =========================================================
+WIDTH & HEIGHT
+========================================================= */
+
+.h-100 {
+  height: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+/* =========================================================
+MARGIN
+========================================================= */
+
+.my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.my-1 {
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+}
+
+.my-2 {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.my-3 {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important;
+}
+
+.my-4 {
+  margin-top: 16px !important;
+  margin-bottom: 16px !important;
+}
+
+.my-5 {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mt-1 {
+  margin-top: 4px !important;
+}
+
+.mt-2 {
+  margin-top: 8px !important;
+}
+
+.mt-3 {
+  margin-top: 12px !important;
+}
+
+.mt-4 {
+  margin-top: 16px !important;
+}
+
+.mt-5 {
+  margin-top: 20px !important;
+}
+
+.mb-2 {
+  margin-bottom: 8px !important;
+}
+
+.mb-3 {
+  margin-bottom: 12px !important;
+}
+
+.mb-4 {
+  margin-bottom: 16px !important;
+}
+
+.mb-5 {
+  margin-bottom: 20px !important;
+}
+
+.mr-2 {
+  margin-right: 8px !important;
+}
+
+.mr-3 {
+  margin-right: 12px !important;
+}
+
+/* =========================================================
+PADDING
+========================================================= */
+
+.pa-1 {
+  padding: 4px !important;
+}
+
+.pa-2 {
+  padding: 8px !important;
+}
+
+.pa-3 {
+  padding: 12px !important;
+}
+
+.pa-4 {
+  padding: 16px !important;
+}
+
+.pa-5 {
+  padding: 20px !important;
+}
+
+.py-1 {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+
+.py-2 {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+
+.py-3 {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+}
+
+.py-4 {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.py-5 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.px-1 {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+.px-2 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.px-3 {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.px-4 {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+.px-5 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.pt-1 {
+  padding-top: 4px !important;
+}
+
+.pt-2 {
+  padding-top: 8px !important;
+}
+
+.pt-3 {
+  padding-top: 12px !important;
+}
+
+.pt-4 {
+  padding-top: 16px !important;
+}
+
+.pt-5 {
+  padding-top: 20px !important;
+}
+
+/* =========================================================
+BORDER RADIUS
+========================================================= */
+
+.rounded {
+  border-radius: $radius;
+}
+
+.rounded-small {
+  border-radius: $radius-small;
+}
+
+/* =========================================================
+TEXT ALIGN
+========================================================= */
+
+.text-center {
+  text-align: center;
+}
+
+/* =========================================================
+FONT SIZES
+========================================================= */
+
+.font-10 {
+  font-size: 10px;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-28 {
+  font-size: 28px;
+}
+
+.font-32 {
+  font-size: 32px;
+}
+
+/* =========================================================
+FONT WEIGHT
+========================================================= */
+
+.f-w-500 {
+  font-weight: 500 !important;
+}
+
+.f-w-600 {
+  font-weight: 600 !important;
+}
+
+.f-w-bold {
+  font-weight: 700 !important;
+}
+
+/* =========================================================
+TEXT COLORS
+========================================================= */
+
+.text-secondary {
+  color: $secondary !important;
+}
+
+.text-secondary-dark {
+  color: $secondary-dark !important;
+}
+
+.text-soft {
+  color: $text-soft !important;
+}
+
+.text-light {
+  color: $text-light !important;
+}
+
+.text-dark {
+  color: $text !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+.text-white-light {
+  color: $white-light !important;
+}
+
+.text-primary-dark {
+  color: $text-primary-dark !important;
+}
+
+/* =========================================================
+OPACITY
+========================================================= */
+
+.opacity-08 {
+  opacity: 0.8 !important;
+}
+
+.opacity-06 {
+  opacity: 0.6 !important;
+}
+
+/* =========================================================
+LETTER SPACING
+========================================================= */
+
+.letter-spacing-2 {
+  letter-spacing: 2px !important;
+}

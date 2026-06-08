@@ -1,0 +1,53 @@
+/* =========================================================
+VARIABLES
+========================================================= */
+
+/* COLORS */
+$primary: #fce136;
+$primary-light: #d6e3ff;
+$primary-opacity: rgba(252, 225, 54, 0.08);
+$primary-dark: #716300;
+
+$secondary: #657699;
+$secondary-light: #c1d6e3;
+$secondary-dark: #2a4270;
+
+$important: #f47a35;
+$important-light: #fd9904;
+$important-dark: #ba1a1a;
+
+$success: #16a34a;
+
+$text: #1e1c11;
+$text-light: #4b4733;
+$text-soft: #716300;
+$text-primary-dark: #6c5e00;
+
+$white: #fff9eb;
+$white-light: #e9e2d1;
+
+$bg: #faf3e1;
+$bg-soft: #fff9eb;
+$bg-strong: #eee8d6;
+$bg-opacity: rgba(0, 0, 0, 0.08);
+$bg-dark: #1e1c11;
+
+/* SPACING */
+$container-width: 1280px;
+$section-padding: 80px 40px;
+$gap: 40px;
+
+$radius: 12px;
+$radius-small: 6px;
+
+/* SHADOWS */
+$shadow-xsm: rgba(0, 0, 0, 0.1) 0px 6px 8px;
+
+$shadow-sm: rgba(0, 0, 0, 0.2) 0px 3px 12px;
+
+$shadow-md: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+
+$shadow-lg:
+  rgba(17, 17, 26, 0.1) 0px 8px 24px,
+  rgba(17, 17, 26, 0.08) 0px 16px 56px,
+  rgba(17, 17, 26, 0.06) 0px 24px 80px;

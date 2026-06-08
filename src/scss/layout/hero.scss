@@ -1,0 +1,323 @@
+@use '../base/variables' as *;
+/* =========================================================
+TAGS
+========================================================= */
+
+.hero-tag,
+.article-tag {
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  margin-top: 40px;
+  padding: 6px 18px;
+
+  border-radius: 999px;
+
+  background: $bg-strong;
+  color: $secondary;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.container-tag-article-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 40px;
+}
+
+/* =========================================================
+HERO
+========================================================= */
+
+.hero {
+  width: 100%;
+  max-width: $container-width;
+  min-height: calc(100dvh - 72px);
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+
+  gap: clamp(24px, 5vw, 60px);
+
+  padding: 20px;
+  margin: auto;
+}
+
+/* =========================================================
+LEFT
+========================================================= */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.hero-title {
+  margin: 32px 0;
+
+  color: $text;
+
+  font-size: clamp(42px, 6vw, 64px);
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  span {
+    color: $text-soft;
+  }
+}
+
+.hero-description {
+  max-width: 600px;
+
+  color: $text-light;
+
+  font-size: clamp(16px, 2vw, 20px);
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+ACTION
+========================================================= */
+
+.hero-action {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 40px;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: $text-light;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+RIGHT
+========================================================= */
+
+.hero-image {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+  min-width: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  justify-self: center;
+
+  img {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: $radius;
+
+    box-shadow: $shadow-lg;
+  }
+}
+
+/* =========================================================
+OVERLAY CARDS
+========================================================= */
+
+.container-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  gap: 20px;
+  padding: 20px;
+
+  border-radius: $radius;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.overlay-card {
+  width: calc(50% - 10px);
+  min-height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 20px;
+
+  border-radius: $radius;
+
+  background: rgba($white, 0.7);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: $shadow-sm;
+
+  h3 {
+    color: $secondary;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+  }
+}
+
+.overlay-card-flex {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  width: 100%;
+  padding: 20px;
+
+  border-radius: $radius;
+
+  background: rgba($white, 0.9);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: $shadow-sm;
+
+  > :first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  h3 {
+    font-size: 12px;
+    color: $secondary-dark !important;
+  }
+
+  h4 {
+    display: flex;
+
+    padding: 0;
+
+    color: $success !important;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+    line-height: 18px;
+
+    &::before {
+      content: '•';
+
+      margin-right: 6px;
+
+      color: $success;
+
+      font-size: 30px;
+    }
+  }
+
+  .range {
+    width: 100%;
+    height: 10px;
+
+    overflow: hidden;
+
+    border-radius: $radius-small;
+
+    background-color: $primary;
+
+    div {
+      width: 88%;
+      height: 100%;
+
+      background-color: rgba(0, 0, 0, 0.09);
+    }
+  }
+}
+
+.overlay-card-title {
+  color: $text-soft;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  line-height: 0.8;
+}
+
+.overlay-card-description {
+  color: $text-light;
+
+  font-size: 14px;
+
+  line-height: 1.4;
+}
+
+/* =========================================================
+GRADIENT
+========================================================= */
+
+.gradiant {
+  position: absolute;
+  z-index: -1;
+
+  top: 50%;
+  right: -10%;
+
+  width: clamp(300px, 70%, 700px);
+
+  aspect-ratio: 1 / 1;
+
+  transform: translateY(-100%) translateX(30%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba($primary, 0.45) 0%,
+    rgba($primary, 0.2) 35%,
+    rgba($primary, 0) 70%
+  );
+
+  filter: blur(30px);
+
+  pointer-events: none;
+}
