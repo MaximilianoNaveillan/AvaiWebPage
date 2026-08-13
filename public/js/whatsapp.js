@@ -34,7 +34,7 @@ export function initWhatsApp() {
 
     const text = `Hola, soy ${name}\n${email}\n\n${message}`;
 
-    window.open(`https://wa.me/56959344449?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/56956387784?text=${encodeURIComponent(text)}`, '_blank');
   }
 
   waToggle.addEventListener('click', () => {
