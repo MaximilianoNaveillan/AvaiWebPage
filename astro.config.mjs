@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   output: 'static',
-  site: 'https://maximilianonaveillan.github.io',
-  base: '/AvaiWebPage/',
+  site: 'https://avai.cl',
+  base: '/',
   trailingSlash: 'ignore',
 });
