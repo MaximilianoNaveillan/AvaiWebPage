@@ -1,5 +1,9 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <button class="btn whatsapp-float" id="waToggle">
-  <img src="/assets/whatsapp-icon.svg" alt="WhatsApp" />
+  <img src={`${base}assets/whatsapp-icon.svg`} alt="WhatsApp" />
 </button>
 
 <div class="wa-chat" id="waChat">
@@ -23,4 +27,3 @@
     <button type="submit">Enviar WhatsApp</button>
   </form>
 </div>
-

@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="container bg-strong">
   <article style="margin-top: 0">
     <h2 class="article-detail">¿Su negocio depende de un laberinto de Excel?</h2>
@@ -8,7 +12,7 @@
     <div class="grid-items grid-items-3">
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-important bg-soft">
-          <img class="grid-item-card-icon" src="/assets/crach.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/crach.svg`} alt="" />
 
           <h3>Silos de Información</h3>
 
@@ -21,7 +25,7 @@
 
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-important bg-soft">
-          <img class="grid-item-card-icon" src="/assets/time.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/time.svg`} alt="" />
 
           <h3>Latencia Operativa</h3>
 
@@ -34,7 +38,7 @@
 
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-important bg-soft">
-          <img class="grid-item-card-icon" src="/assets/error.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/error.svg`} alt="" />
 
           <h3>Riesgo de Integridad</h3>
 

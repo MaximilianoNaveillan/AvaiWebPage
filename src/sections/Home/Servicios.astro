@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="container">
   <article>
     <div class="container-tag-article-row article-row-2">
@@ -13,7 +17,7 @@
     <div class="grid-items grid-items-4">
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-secodary card-hover bg-opacity">
-          <img class="grid-item-card-icon" src="/assets/gear-icon.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/gear-icon.svg`} alt="" />
 
           <h3>Automatización</h3>
 
@@ -23,7 +27,7 @@
 
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-secodary card-hover bg-opacity">
-          <img class="grid-item-card-icon" src="/assets/database-icon.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/database-icon.svg`} alt="" />
 
           <h3>Estructuración</h3>
 
@@ -33,7 +37,7 @@
 
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-secodary card-hover bg-opacity">
-          <img class="grid-item-card-icon" src="/assets/graphic-icon.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/graphic-icon.svg`} alt="" />
 
           <h3>Analítica Real-time</h3>
 
@@ -42,7 +46,7 @@
       </div>
       <div class="grid-item">
         <div class="grid-item-card grid-item-card-secodary card-hover bg-opacity">
-          <img class="grid-item-card-icon" src="/assets/pointer-icon.svg" alt="" />
+          <img class="grid-item-card-icon" src={`${base}assets/pointer-icon.svg`} alt="" />
 
           <h3>Analítica Real-time</h3>
 
