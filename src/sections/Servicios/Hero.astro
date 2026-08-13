@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="hero">
   <!-- LEFT -->
   <div class="hero-content">
@@ -33,7 +37,7 @@
 
   <!-- RIGHT -->
   <div class="hero-image">
-    <img src="assets/Industrial-Tech.png" alt="Software empresarial" />
+    <img src={`${base}assets/Industrial-Tech.png`} alt="Software empresarial" />
 
     <div class="container-overlay" style="background: transparent">
       <div class="overlay-card-flex">
