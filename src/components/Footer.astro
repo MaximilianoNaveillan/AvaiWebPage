@@ -1,7 +1,11 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <footer class="container-footer bg-opacity">
   <div class="footer-top">
     <div class="footer-title">
-      <img src="/assets/icono.svg" alt="logo" class="logo" />
+      <img src={`${base}assets/icono.svg`} alt="logo" class="logo" />
       <span>Consultoría Técnica</span>
     </div>
 

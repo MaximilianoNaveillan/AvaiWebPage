@@ -1,43 +1,83 @@
-# Astro Starter Kit: Minimal
+# AVAI Astro
+
+Landing site estatica para AVAI, una marca de consultoria tecnica enfocada en software a medida, automatizacion, arquitectura de datos y eficiencia operativa.
+
+## Stack
+
+- Astro 6
+- Sass/SCSS
+- JavaScript vanilla para interacciones globales
+- Build estatico para GitHub Pages
+
+## Comandos
+
+Todos los comandos se ejecutan desde `avai-astro`.
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev
+npm run build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+|-- components/       # Header, footer, WhatsApp y UI compartida
+|-- layouts/          # BaseLayout global
+|-- pages/            # Rutas publicas
+|-- scss/             # Base, componentes y layout global
+`-- sections/         # Secciones agrupadas por pagina
+
+public/
+|-- assets/           # Imagenes e iconos
+|-- fonts/            # Fuentes Inter
+`-- js/               # Interacciones del cliente
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Rutas
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `/`: home
+- `/servicios`: servicios tecnicos
+- `/nosotros`: filosofia y equipo
+- `/casosExitos`: casos de exito
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Convenciones
 
-## 🧞 Commands
+- Usar componentes Astro estaticos para contenido y estructura.
+- Mantener estilos globales dentro de `src/scss/main.scss` y sus modulos.
+- Usar `import.meta.env.BASE_URL` para assets publicos y enlaces internos cuando aplique.
+- Evitar editar `dist` salvo que se necesite actualizar una salida generada.
+- Mantener el tono de marca en espanol: tecnico, preciso, directo y orientado a resultados medibles.
 
-All commands are run from the root of the project, from a terminal:
+## Interacciones
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Las interacciones viven en `public/js`:
 
-## 👀 Want to learn more?
+- `main.js`: inicializacion general.
+- `tabs.js`: indicador de navegacion activa.
+- `drawer.js`: menu movil.
+- `whatsapp.js`: formulario flotante y CTAs de contacto.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Como el sitio usa `ClientRouter`, cualquier inicializador de JavaScript debe ser idempotente para evitar listeners duplicados despues de navegar entre rutas.
+
+## opencode
+
+Este proyecto incluye configuracion local en `.opencode/`:
+
+- `.opencode/opencode.json`: configuracion local con schema.
+- `.opencode/project.md`: contexto del proyecto para agentes.
+- `.opencode/skills/astro-avai`: trabajo sobre Astro, SCSS y JS del sitio.
+- `.opencode/skills/avai-copy-seo`: copy, SEO y tono de marca.
+- `.opencode/skills/avai-quality-review`: checklist de revision tecnica.
+
+Despues de modificar configuracion, agentes, comandos o skills de opencode, reinicia opencode para que los cambios se carguen.
+
+## Calidad Recomendada
+
+- Ejecutar `npm run build` despues de cambios funcionales.
+- Revisar navegacion desktop y mobile.
+- Validar CTAs de WhatsApp tras navegar entre paginas.
+- Mantener metadata SEO unica por pagina.
+- Agregar `width`, `height`, `loading` y `decoding` a imagenes cuando corresponda.

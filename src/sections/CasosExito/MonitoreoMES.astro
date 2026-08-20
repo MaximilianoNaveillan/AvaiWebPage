@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="container">
     <article>
       <div class="grid-items grid-items-3-1">
@@ -6,7 +10,7 @@
             <img
               class="rounded elevation-1"
               style="width: 100%; max-width: 100%"
-              src="/assets/monitoreo-MES.png"
+              src={`${base}assets/monitoreo-MES.png`}
               alt="Monitoreo MES"
             />
           </div>
@@ -15,7 +19,7 @@
           <div class="mb-3">
             <h2>
               <span class="hero-tag text-soft mt-0 mb-3">
-                <i class="mr-3 d-flex py-1"><img src="/assets/robot.svg" alt="ícono" /> </i>
+                <i class="mr-3 d-flex py-1"><img src={`${base}assets/robot.svg`} alt="ícono" /> </i>
                 PLANTA DE AUTOPARTES</span
               ><span class="d-block">Monitoreo MES de Alta Resolución</span>
             </h2>

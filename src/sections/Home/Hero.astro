@@ -1,9 +1,13 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="hero">
   <!-- LEFT -->
   <div class="hero-content">
     <span>
       <h2 class="hero-tag">
-        <i class="mr-2 d-flex"><img src="/assets/code-file.svg" alt="ícono" /> </i>
+        <i class="mr-2 d-flex"><img src={`${base}assets/code-file.svg`} alt="ícono" /> </i>
         EFICIENCIA OPERATIVA
       </h2>
     </span>
@@ -43,7 +47,7 @@
 
   <!-- RIGHT -->
   <div class="hero-image">
-    <img src="/assets/hero.png" alt="Software empresarial" />
+    <img src={`${base}assets/hero.png`} alt="Software empresarial" />
 
     <div class="container-overlay">
       <div class="overlay-card">

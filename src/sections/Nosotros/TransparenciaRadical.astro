@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="container">
   <article>
     <div class="bg-opacity rounded px-5">
@@ -23,7 +27,7 @@
         <div class="d-flex flex-center">
           
           <img
-            src="/assets/nosotros.png"
+            src={`${base}assets/nosotros.png`}
             alt="Equipo AVAI"
             width="520"
             loading="lazy"

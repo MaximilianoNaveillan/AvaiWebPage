@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="container">
   <article>
     <div class="grid-items grid-items-3-1">
@@ -6,7 +10,7 @@
           <h2>
             <span class="hero-tag text-soft mt-0 mb-3">
               <i class="mr-3 d-flex py-1">
-                <img src="/assets/box.svg" alt="ícono" />
+                 <img src={`${base}assets/box.svg`} alt="ícono" />
               </i>
               SECTOR FINANCIERO
             </span>
@@ -62,7 +66,7 @@
               <div class="list-icon">
                 <i>
                   <img
-                    src="/assets/check-background-icon.svg"
+                    src={`${base}assets/check-background-icon.svg`}
                     alt="dashboard-icon"
                   />
                 </i>
@@ -84,7 +88,7 @@
         <img
           class="rounded-small elevation-1"
           style="width: 100%; max-width: 100%"
-          src="/assets/automatizacion-bancaria.png"
+          src={`${base}assets/automatizacion-bancaria.png`}
           alt="Automatización Bancaria"
         />
       </div>

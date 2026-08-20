@@ -1,5 +1,7 @@
 ---
-const pathname = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+
+const path = (url: string) => `${base}${url}`.replace(/\/\/+/g, '/');
 ---
 
 <header >
@@ -7,24 +9,24 @@ const pathname = Astro.url.pathname;
     <button class="menu-toggle" id="openDrawer">☰</button>
 
     <div class="logo">
-      <img src="/assets/icono.svg" alt="logo" />
+      <img src={path('assets/icono.svg')} alt="logo" />
       <span>AVAI</span>
     </div>
 
     <nav class="tabs" transition:persist>
-      <a class="tab" href="/">
+      <a class="tab" href={base}>
         Inicio
       </a>
 
-      <a class="tab" href="/servicios">
+      <a class="tab" href={path('servicios')}>
         Servicios
       </a>
 
-      <a class="tab" href="/nosotros">
+      <a class="tab" href={path('nosotros')}>
         Nosotros
       </a>
 
-      <a class="tab" href="/casosExitos">
+      <a class="tab" href={path('casosExitos')}>
         Casos de Éxito
       </a>
 
@@ -47,21 +49,21 @@ const pathname = Astro.url.pathname;
     <div id="drawer" class="drawer">
       <div class="drawer-header">
         <div class="logo">
-          <img src="/assets/icono.svg" alt="logo" />
+          <img src={path('assets/icono.svg')} alt="logo" />
           <span>AVAI</span>
         </div>
         <button class="close-btn" id="closeDrawer">✕</button>
       </div>
 
-      <a href="/">Inicio</a>
+      <a href={base}>Inicio</a>
 
-      <a href="/servicios">
+      <a href={path('servicios')}>
         Servicios
       </a>
-      <a href="/nosotros">
+      <a href={path('nosotros')}>
         Nosotros
       </a>
-      <a href="/casosExitos">
+      <a href={path('casosExitos')}>
         Casos de Éxito
       </a>
     </div>

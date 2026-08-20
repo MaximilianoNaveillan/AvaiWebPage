@@ -9,13 +9,17 @@ export function initTabs() {
   if (!indicator || !links.length) return;
 
   function getCurrentPath() {
-    return window.location.pathname;
+    return normalizePath(window.location.pathname);
+  }
+
+  function normalizePath(path) {
+    return path.length > 1 ? path.replace(/\/$/, '') : path;
   }
 
   function getActiveTab() {
     const currentPath = getCurrentPath();
 
-    return links.find((link) => link.getAttribute('href') === currentPath) || links[0];
+    return links.find((link) => normalizePath(link.getAttribute('href')) === currentPath) || links[0];
   }
 
   function moveIndicator(element) {

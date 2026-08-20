@@ -1,3 +1,7 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section class="container bg-dark">
   <article>
     <div class="grid-items grid-items-2 gap-30">
@@ -11,7 +15,7 @@
           <div class="list-item">
             <div class="list-icon">
               <i>
-                <img src="/assets/dashboard-background-icon.svg" alt="dashboard-icon" />
+                <img src={`${base}assets/dashboard-background-icon.svg`} alt="dashboard-icon" />
               </i>
             </div>
             <div class="list-section">
@@ -22,7 +26,7 @@
           <div class="list-item">
             <div class="list-icon">
               <i>
-                <img src="/assets/protected-background-icon.svg" alt="protected-icon" />
+                <img src={`${base}assets/protected-background-icon.svg`} alt="protected-icon" />
               </i>
             </div>
             <div class="list-section">
